@@ -2,16 +2,20 @@
  * Created by Ben on 5/16/16.
  */
 public class Person {
-    static int familySize = 10;
+    static final int familySize = 10;
     String name;
     int age;
     boolean isAlive;
     Person[] family = new Person[familySize];
 
-    public Person(String name, int age, boolean isAlive) {
+    /*public Person(String name, int age, boolean isAlive) {
 
     }
+    */
 
+    public Person() {
+
+    }
     public String getName() {
         return name;
     }
