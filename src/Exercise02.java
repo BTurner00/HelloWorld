@@ -9,7 +9,7 @@ public class Exercise02 {
         Email e1 = new Email("Hi", "", "alice@theironyard.com");
         Email e2 = new Email("Hi", "", "bob@theironyard.com");
         Email e3 = new Email("Hi", "", "charlie@theironyard.com");
-        Email e4 = new Email("Hi", "", "alice@theironyard.com");
+        Email e4 = new Email("Hi2", "", "alice@theironyard.com");
         Email e5 = new Email("Hi", "", "bob@theironyard.com");
 
         Email[] emails = {e1, e2, e3, e4, e5};

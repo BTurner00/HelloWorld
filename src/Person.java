@@ -3,33 +3,36 @@ import java.util.Arrays;
 /**
  * Created by Ben on 5/16/16.
  */
-public class Person {
-    static final int familySize = 10;
+public class Person implements Comparable <Person> {
+    //static final int familySize = 10;
     String name;
     int age;
     boolean isAlive;
-    Person[] family = new Person[familySize];
+    //Person[] family = new Person[familySize];
 
-    /*public Person(String name, int age, boolean isAlive) {
-
+    public Person(String name, int age, boolean isAlive) {
+        this.name = name;
+        this.age = age;
+        this.isAlive = isAlive;
     }
-    */
+
 
     public Person() {
 
     }
+
     public String getName() {
         return name;
     }
 
-    /*public void setName (String newName){
+    public void setName(String newName) {
 
-        if (isValidName(newName)) {
-            name = newName;
-        }
-    }*/
 
-    public int getAge(){
+        name = newName;
+
+    }
+
+    public int getAge() {
         return age;
     }
 
@@ -37,19 +40,20 @@ public class Person {
         age = newAge;
 
     }
-/*
+
     public boolean getIsAlive() {
         return isAlive;
     }
 
     public void setIsAlive(boolean newIsAlive) {
         isAlive = newIsAlive;
-    }*/
+    }
+
     public static boolean isValidName(String newName) {
         return newName.contains(" ");
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
@@ -57,6 +61,12 @@ public class Person {
                 ", isAlive=" + isAlive +
                 ", family=" + Arrays.toString(family) +
                 '}';
+    }*/
+
+
+    @Override
+    public int compareTo(Person otherPerson) {
+        return this.name.compareTo(otherPerson.name);
     }
 }
 
