@@ -18,16 +18,20 @@ public class Exercise08 {
         System.out.println("Enter a name to search: ");
         Scanner scanner = new Scanner(System.in);
         String search = scanner.nextLine();
-
-        int i =0;
-
-        while(names.size()>i) {
-            String tempName = names.get(i);
-            if (tempName.contains(search)) {
-                System.out.println(tempName);
+        //search = search.toLowerCase();
+/*
+        for( String name : names) {
+            if (name.contains(search)) {
+                System.out.println(name);
             }
-            i++;
-        }
+        }*/
+
+
+        //stream
+
+        names.stream()
+                .filter(name -> name.toLowerCase().contains(search.toLowerCase()))
+                .forEach(System.out::println);
 
 
 
